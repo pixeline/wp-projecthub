@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="274px" height="63px" viewBox="0 0 274 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
+    <title>login-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="login-logo" sketch:type="MSArtboardGroup">
+            <circle id="Oval-1" fill="#1C3F9B" sketch:type="MSShapeGroup" cx="68" cy="32" r="25"></circle>
+            <text id="PROJECTHUB" sketch:type="MSTextLayer" font-family="Arial" font-size="18" font-weight="bold" fill="#1C3F9B">
+                <tspan x="96" y="38">PROJECTHUB</tspan>
+            </text>
+            <path d="M97.5,44 L217,44" id="Line" stroke="#1C3F9B" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <polygon id="Star-1" fill="#FFFFFF" sketch:type="MSShapeGroup" points="68.5 39.25 59.3893286 44.0397634 61.129312 33.8948817 53.758624 26.7102366 63.9446643 25.2301183 68.5 16 73.0553357 25.2301183 83.241376 26.7102366 75.870688 33.8948817 77.6106714 44.0397634 "></polygon>
+        </g>
+    </g>
+</svg>

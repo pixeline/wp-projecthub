@@ -1,0 +1,321 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+
+	font-size: 100%;
+	line-height: 1.5;
+	color: $text-color;
+  	-webkit-font-smoothing: antialiased;
+  	-webkit-text-size-adjust: 100%;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+header{
+	border-bottom:1px solid $gray;
+	padding:1em;
+}
+footer{
+	border-top:1px solid $gray;
+	padding:0 0 0 em;
+	font-size:80%;
+}
+.timeline-section{
+	border-top:1px solid $gray;
+}
+.brand-name {
+
+	a{
+		color:$text-color;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+}
+.breadcrumbs{
+	padding-left:0;
+	margin-left:0;
+	text-transform: lowercase;
+	opacity:.4;
+	transition: all .3s ease-out;
+	a{
+		text-decoration: none;
+		text-transform: lowercase;
+		color: $text-color;
+	}
+	.divider{
+		color: $gray;
+	}
+	
+	&:hover{
+		opacity:1;
+	}
+}
+.main-content{
+	padding:2em 1em 2em 0;
+}
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h2.ui{
+	padding:0 0 0 0;
+	margin-left:1em;
+	font-size:rem-calc(14);
+	color:$gray;
+}
+
+/****
+
+Listing of All projects
+*****/
+.all-projects {
+	margin-top:0;
+	padding-top:0;
+	li{
+	font-size:240%;
+	line-height: 1.4;
+	margin-bottom:rem-calc(32);
+	text-transform: uppercase;
+	list-style:decimal-leading-zero;
+	list-style-position: outside;
+	color:$gray;
+	a{
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	}
+}
+
+/************Timeline**************/
+/* Timeline Container */
+.timeline {
+	border-left: 5px solid $gray;
+	padding-bottom: 3em;
+	position: relative; 
+
+	&:before {
+    	content: "";
+		position: absolute;
+		bottom: 0;
+		left: -27px;
+		width: 40px;
+		height: 40px;
+		border-radius: 40px;
+		background: $gray;
+		border: 5px solid $gray; 
+    }
+}
+
+/* Individual Timeline Item */
+.tl-node {
+	padding-left: 2em;
+	margin-bottom: rem-calc(68);
+	position: relative; 
+	a {
+    	display: block; 
+    }
+    &:before {
+    	content: "";
+		position: absolute;
+		top: -5px;
+		left: -17px;
+		width: 20px;
+		height: 20px;
+		border-radius: 20px;
+		background: $white;
+		border: 5px solid $gray; 
+    }
+
+}
+
+h3.tl-title{
+	font-size:140%;
+	line-height: 1;
+	margin-bottom:rem-calc(5);
+}
+/* Timestamp */
+.tl-stamp {
+	font-size: rem-calc(12);
+	text-transform: lowercase;
+}
+
+.tl-attachments{
+	
+	
+	// Style Links Depending on Destination
+	a{
+        display:inline-block;
+        background:transparent url('svg-icons/file-pdf.svg') center left no-repeat;
+        background-size: contain;
+        padding-left:30px;
+		line-height: 1.5;
+		margin:5px 0;
+        color: $link-color;
+        font-size:80%;
+        &:hover,&:focus{
+	       color:$link-hover;
+        }
+	}
+	a[href$=".pdf"] {
+        /* PDF file */
+        background-image: url('svg-icons/file-pdf.svg');
+	}
+	a[href$=".doc"] {
+        /* Microsoft Word document */
+        background-image: url('svg-icons/file-pdf.svg');
+	}
+
+	a[href$=".mp3"] {
+        /* Music file */
+        background-image: url('svg-icons/file-music.svg');
+	}
+	a[href$=".mp4"],
+	a[href$=".avi"] {
+        /* Music file */
+        background-image: url('svg-icons/file-video.svg');
+	}
+	a[href$=".zip"] {
+        /* Archive file */
+        background-image: url('svg-icons/file-zip.svg');
+
+	}
+}
+
+/************End Timeline**************/
+
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+
+.pagination,
+.wp-prev-next {
+	margin: 1.5em 0;
+}
+	.pagination{
+    text-align: center;
+
+    ul {
+      display: inline-block;
+      background-color: $white;
+      white-space: nowrap;
+      padding: 0;
+      clear: both;
+      border-radius: 3px;
+    }
+
+    li {
+      padding: 0;
+      margin: 0;
+      float: left;
+      display: inline;
+      overflow: hidden;
+      border-right: 1px solid $gray;
+    }
+
+    a, span {
+      margin: 0;
+      text-decoration: none;
+      padding: 0;
+      line-height: 1em;
+      font-size: 1em;
+      font-weight: normal;
+      padding: 0.75em;
+      min-width: 1em;
+      display: block;
+      color: $blue;
+
+      &:hover, &:focus {
+      	background-color: $blue;
+      	color: $white;
+      }
+    }
+
+    .current{
+    	cursor: default;
+    	color: $text-color;
+
+    	&:hover, &:focus {
+    		background-color: $white;
+    		color: $text-color;
+    	}
+    }
+
+  } /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+
