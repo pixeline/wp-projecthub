@@ -14,9 +14,12 @@ and will be used across all viewports.
 /*********************
 GENERAL STYLES
 *********************/
-
+*{
+	 -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
 body {
-
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
@@ -24,7 +27,9 @@ body {
   	-webkit-text-size-adjust: 100%;
   	-moz-osx-font-smoothing: grayscale;
 }
-
+.pure-g{
+	font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -41,30 +46,30 @@ footer{
 	border-top:1px solid $gray;
 }
 .brand-name {
-
 	a{
 		color:$text-color;
 		text-transform: uppercase;
 		text-decoration: none;
+		text-align: center;
+		display: block;
 	}
 }
+
+.user-menu{
+	text-transform: lowercase;
+}
+
 .breadcrumbs{
 	padding-left:0;
 	margin-left:0;
 	text-transform: lowercase;
-	opacity:.4;
-	transition: all .3s ease-out;
 	a{
 		text-decoration: none;
 		text-transform: lowercase;
 		color: $text-color;
 	}
 	.divider{
-		color: $gray;
-	}
-	
-	&:hover{
-		opacity:1;
+		color: $mid-gray;
 	}
 }
 .main-content{
@@ -120,9 +125,12 @@ h2.ui{
 	padding:0 0 0 0;
 	margin-left:1em;
 	font-size:rem-calc(14);
-	color:$gray;
+	color:$mid-gray;
 }
 
+.taxonomy-description{
+	font-size:140%;
+}
 /****
 
 Listing of All projects
@@ -154,6 +162,7 @@ Listing of All projects
 	padding-bottom: 3em;
 	position: relative; 
 
+		border-color: $blue; 
 	&:before {
     	content: "";
 		position: absolute;
@@ -163,7 +172,9 @@ Listing of All projects
 		height: 40px;
 		border-radius: 40px;
 		background: $gray;
-		border: 5px solid $gray; 
+		border: 5px solid $gray;
+		background:$blue;
+		border-color: $blue; 
     }
 }
 
@@ -175,6 +186,8 @@ Listing of All projects
 	a {
     	display: block; 
     }
+    transition: all .3s ease-in-out;
+    color:$mid-gray;
     &:before {
     	content: "";
 		position: absolute;
@@ -185,8 +198,15 @@ Listing of All projects
 		border-radius: 20px;
 		background: $white;
 		border: 5px solid $gray; 
+		border-color: $blue; 
+		transition: all .3s ease-in-out;
     }
-
+    &:hover{
+		color:$text-color;
+	    &:before{
+			background:$blue;
+		}  
+    }
 }
 
 h3.tl-title{

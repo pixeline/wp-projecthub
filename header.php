@@ -16,8 +16,8 @@
 		
 		<header class="pure-g">
 			<div class="pure-u-1 pure-u-md-1-4">
-				<p class="brand-name">
-					<a href="/">pixeline</a>
+				<p class="brand-name" itemscope itemtype="http://schema.org/Organization">
+					<a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 				</p>
 			</div>
 			<div class="pure-u-1 pure-u-md-1-2">
@@ -26,18 +26,8 @@
 				</p>
 			</div>
 			<div class="pure-u-1 pure-u-md-1-4">
-				<p><?php 
-					get_currentuserinfo();
-					global $user_ID;
-					if (” != $user_ID) {
-						?>
-						<a href="
-						<?
-						echo get_edit_profile_url( $user_ID->ID);
-					 ?>">My account</a> 
-					 <a href="<?php echo wp_logout_url(); ?>">Log out</a>
-					 <?php
-						 }
-						 ?> </p>
+				<p class="user-menu">
+					<a href="<?php echo wp_logout_url(); ?>">Log out</a>
+				</p>
 			</div>
 		</header>
