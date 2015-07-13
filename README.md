@@ -9,11 +9,15 @@ This theme turns a wordpress install into a Projecthub:
 ## What does it look like?
 Clean, lightweight (no webfonts nor decoration) and elegant.
 
-### Front page
+<figure>
+<figcaption>Front page</figcaption>
 <img src="http://www.awesomescreenshot.com/upload/8784/8889/2ac896cc-1588-464d-5a6c-f21ee7764b1f.png">
+</figure>
 
-### Inside a project - the projecthub
+<figure>
+<figcaption>Inside a project - the projecthub</figcaption>
 <img src="http://www.awesomescreenshot.com/upload/8784/8889/3687e073-1448-4faf-5c24-f04d0f6c315b.png">
+</figure>
 
 ## what is missing?
 - if you want to restrict projects to specific users, you may need to use a plugin that does that.
