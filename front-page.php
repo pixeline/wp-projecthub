@@ -23,8 +23,7 @@
 	'depth'              => 0,
 	'current_category'   => 0,
 	'pad_counts'         => 0,
-	'taxonomy'           => 'category',
-	'walker'             => null
+	'taxonomy'           => 'category'
     );
 			wp_list_categories($args);
 			?>
