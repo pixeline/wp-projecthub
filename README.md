@@ -6,6 +6,15 @@ This theme turns a wordpress install into a Projecthub:
 - "posts" become "project updates", and "categories" become "Projects".
 - frontpage shows list of Projects for logged in users.
 
+## What does it look like?
+Clean, lightweight (no webfonts nor decoration) and elegant.
+
+### Front page
+<img src="http://www.awesomescreenshot.com/upload/8784/8889/2ac896cc-1588-464d-5a6c-f21ee7764b1f.png">
+
+### Inside a project - the projecthub
+<img src="http://www.awesomescreenshot.com/upload/8784/8889/3687e073-1448-4faf-5c24-f04d0f6c315b.png">
+
 ## what is missing?
 - if you want to restrict projects to specific users, you may need to use a plugin that does that.
 
