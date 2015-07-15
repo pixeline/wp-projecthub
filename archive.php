@@ -38,14 +38,13 @@
 			'post_parent' => $post->ID
 		); 
 		$attachments = get_posts($args);
-		if ($attachments) {
-			?><ol><?
-			foreach ($attachments as $attachment) {
-				?><li><? the_attachment_link($attachment->ID, false); ?></li><?
-			}
-			?></ol><?
-		}
-?>
+			if ($attachments) {?>
+			<ol>
+				<?php foreach ($attachments as $attachment) { ?>
+					<li><?php the_attachment_link($attachment->ID, false); ?></li>
+					<?php } ?>
+			</ol>
+			<?php	} ?>
 				</div>
 			</li>
 <?php endwhile; endif; ?>
