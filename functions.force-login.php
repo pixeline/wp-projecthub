@@ -20,28 +20,7 @@ function v_forcelogin() {
     exit();
   }
 }
-add_action('init', 'v_forcelogin');
-
 /*
-add_action('template_redirect','fstop_check_if_logged_in');
-function fstop_check_if_logged_in()
-{
-    if(!is_user_logged_in()) //Are they logged in? If not:
-    {
-        // Get the requested URL
-        global $wp;
-        $requested_url = home_url( $wp->request );
-
-        //Set $url to {site_url()}/wp-login.php?redirect_to={$requested_url}
-        $url = add_query_arg(
-            'redirect_to',
-            $requested_url,
-            site_url('wp-login.php')
-        );
-        
-        //redirect any request to {site_url()}/wp-login.php?redirect_to={$requested_url}
-        wp_redirect($url);
-        exit;
-    }
-}
+Uncomment the following line if you want to password-protect your hubs.
 */
+// add_action('init', 'v_forcelogin');
